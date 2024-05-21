@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abid Shaikh</title>
+    <link rel="shortcut-icon" type="png" href="myimg.png">
+
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+
+    <nav class="bg-gray-800 shadow-lg text-white">
+        <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+            <div>
+                <a href="mailto:shaikhabid8440@gmail.com" class="hover:text-gray-300">
+                    <i class="fas fa-envelope mr-2"></i>
+                    <span class="font-bold">shaikhabid8440@gmail.com</span>
+                </a>
+            </div>
+            <div class="hidden md:flex space-x-4">
+                <a href="#about" class="hover:text-gray-300">About</a>
+                <a href="#education" class="hover:text-gray-300">Education</a>
+                <a href="#skills" class="hover:text-gray-300">Skills</a>
+                <a href="#projects" class="hover:text-gray-300">Projects</a>
+                <a href="#contact" class="hover:text-gray-300">Contact</a>
+            </div>
+            <div class="md:hidden">
+                <button onclick="toggleNavbar()" class="text-white focus:outline-none">
+                    <span id="navbar-icon"><i class="fas fa-bars"></i></span>
+                </button>
+            </div>
+        </div>
+        <div id="mobileMenu" class="md:hidden hidden">
+            <a href="#about" class="block py-2 hover:bg-gray-700">About</a>
+            <a href="#education" class="hover:text-gray-300">Education</a>
+            <a href="#skills" class="block py-2 hover:bg-gray-700">Skills</a>
+            <a href="#projects" class="block py-2 hover:bg-gray-700">Projects</a>
+            <a href="#contact" class="block py-2 hover:bg-gray-700">Contact</a>
+        </div>
+    </nav>
+
+
+
+    <section id="landing" class="text-center py-20">
+        <div class="container mx-auto">
+            <img src="profile-pic .png" alt="Abid Shaikh"
+                class="rounded-full w- lg:w-60 xl:w-60 h-40 lg:h-60 xl:h-60 border-4 border-white mx-auto mb-4">
+            <h1 class="text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight">Hey👋 I'm Abid Shaikh</h1>
+            <p class="mt-4 text-lg lg:text-xl xl:text-2xl font-bold">Frontend Developer</p>
+            <a href="#about"
+                class="mt-8 px-6 py-3 bg-white text-black rounded-full font-semibold hover:bg-gray-300 inline-block">Learn
+                More</a>
+        </div>
+        <div class="arrow-wrapper mx-auto mt-4" onclick="scrollToAbout()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="feather feather-chevron-down">
+                <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+        </div>
+    </section>
+
+    <section id="about" class="py-20 text-center">
+        <div class="container mx-auto">
+            <h2 class="font-bold text-white">About Me</h2>
+            <p class="mt-4 text-lg text-white mx-auto text-justify lg:text-center ">Welcome to my portfolio! I'm Abid
+                Shaikh, a passionate
+                frontend developer with a keen interest in C++ and Python programming languages. With a strong
+                foundation in web development and a curiosity for exploring new technologies, I strive to create
+                engaging and user-friendly digital experiences.</p>
+        </div>
+    </section>
+    <section id="education" class="py-20 text-center fade-in-up">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-white mb-8">Education</h2>
+            <div class="flex flex-col items-center">
+                <img src="https://www.reviewadda.com/assets/uploads/college/logo/LOGO_70468.gif" alt="CHM College Logo"
+                    class="w-24 h-24 mb-4">
+                <h3 class="text-2xl font-semibold text-white">CHM College</h3>
+                <p class="text-lg text-white">BSc Computer Science, First Year</p>
+                <p class="text-lg text-white">Expected Graduation: 2026</p>
+                <p class="text-lg text-white mt-4 text-justify lg:text-center">I'm a first-year BSc Computer Science
+                    student at CHM College, with an expected graduation year of 2026. Passionate about coding,
+                    technology, and continuous learning, I'm eager to contribute to innovative projects and expand my
+                    knowledge in the field of computer science.</p>
+                <p class="text-lg text-white mt-4"></p>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="py-20 text-center fade-in-up">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-white">My Skills</h2>
+            <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-8">
+
+                <div class="skill-card p-6 rounded-lg bg-gray-800 relative" onmouseover="showDescription(this)"
+                    onmouseout="hideDescription(this)">
+                    <div
+                        class="skill-description absolute top-0 left-0 right-0 bottom-0 bg-opacity-80 flex justify-center items-center transition-opacity duration-300 opacity-0">
+                        <p class="text-white">Proficient in building responsive and interactive web interfaces using
+                            HTML and CSS.</p>
+                    </div>
+                    <i class="fab fa-html5 text-5xl text-gray-400"></i>
+                    <i class="fab fa-css3-alt text-5xl text-blue-300" style="margin-top: 20px;"></i>
+                </div>
+
+                <div class="skill-card p-6 rounded-lg bg-gray-800 relative" onmouseover="showDescription(this)"
+                    onmouseout="hideDescription(this)">
+                    <div
+                        class="skill-description absolute top-0 left-0 right-0 bottom-0 bg-opacity-80 flex justify-center items-center transition-opacity duration-300 opacity-0">
+                        <p class="text-white">Skilled in frontend scripting with JavaScript to create dynamic and
+                            feature-rich websites.</p>
+                    </div>
+                    <i class="fab fa-js-square text-5xl text-yellow-400"></i>
+                </div>
+
+                <div class="skill-card p-6 rounded-lg bg-gray-800 relative" onmouseover="showDescription(this)"
+                    onmouseout="hideDescription(this)">
+                    <div
+                        class="skill-description absolute top-0 left-0 right-0 bottom-0 bg-opacity-80 flex justify-center items-center transition-opacity duration-300 opacity-0">
+                        <p class="text-white">Experience in building modern web applications using React.js framework.
+                        </p>
+                    </div>
+                    <i class="fab fa-react text-5xl text-blue-400"></i>
+                </div>
+
+                <div class="skill-card p-6 rounded-lg bg-gray-800 relative" onmouseover="showDescription(this)"
+                    onmouseout="hideDescription(this)">
+                    <div
+                        class="skill-description absolute top-0 left-0 right-0 bottom-0 bg-opacity-80 flex justify-center items-center transition-opacity duration-300 opacity-0">
+                        <p class="text-white">Proficient in Python programming language for web development, scripting,
+                            and data analysis.</p>
+                    </div>
+                    <i class="fab fa-python text-5xl text-yellow-500"></i>
+                </div>
+
+                <div class="skill-card p-6 rounded-lg bg-gray-800 relative" onmouseover="showDescription(this)"
+                    onmouseout="hideDescription(this)">
+                    <div
+                        class="skill-description absolute top-0 left-0 right-0 bottom-0 bg-opacity-80 flex justify-center items-center transition-opacity duration-300 opacity-0">
+                        <p class="text-white">Proficient in C++ programming language for software development,
+                            algorithms, and systems programming.</p>
+                    </div>
+                    <i class="fab fa-cuttlefish text-5xl text-green-500"></i>
+                </div>
+
+                <div class="skill-card p-6 rounded-lg bg-gray-800 relative" onmouseover="showDescription(this)"
+                    onmouseout="hideDescription(this)">
+                    <div
+                        class="skill-description absolute top-0 left-0 right-0 bottom-0 bg-opacity-80 flex justify-center items-center transition-opacity duration-300 opacity-0">
+                        <p class="text-white">Proficient in Node.js for scalable server-side JavaScript applications.
+                        </p>
+                    </div>
+                    <i class="fab fa-node-js text-5xl text-green-400"></i>
+
+                </div>
+    </section>
+    <section id="tools" class="py-20 text-center fade-in-up">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-white mb-8">Tools</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <!-- Card for VS Code -->
+                <div
+                    class="tool-card bg-gray-800 rounded-full p-4 flex flex-col items-center justify-center hover:shadow-lg transition duration-300">
+                    <img src="visual-studio.png" alt="VS Code" class="w-16 h-16 mb-4 rounded-full">
+                    <h3 class="text-lg font-semibold text-white">VS Code</h3>
+                </div>
+                <!-- Card for Git -->
+                <div
+                    class="tool-card bg-gray-800 rounded-full p-4 flex flex-col items-center justify-center hover:shadow-lg transition duration-300">
+                    <img src="git-svgrepo-com.svg" alt="Git" class="w-16 h-16 mb-4 rounded-full">
+                    <h3 class="text-lg font-semibold text-white">Git</h3>
+                </div>
+                <!-- Card for GitHub -->
+                <div
+                    class="tool-card bg-gray-800 rounded-full p-4 flex flex-col items-center justify-center hover:shadow-lg transition duration-300">
+                    <img src="social.png" alt="GitHub" class="w-16 h-16 mb-4 rounded-full">
+                    <h3 class="text-lg font-semibold text-white">GitHub</h3>
+                </div>
+                <!-- Card for Linux -->
+                <div
+                    class="tool-card bg-gray-800 rounded-full p-4 flex flex-col items-center justify-center hover:shadow-lg transition duration-300">
+                    <img src="linux.png" alt="Linux" class="w-16 h-16 mb-4 rounded-full">
+                    <h3 class="text-lg font-semibold text-white">Linux</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <section id="projects" class="py-20 text-center fade-in-up">
+        <div class="container">
+            <h2 class="text-3xl font-bold text-white">Projects</h2>
+            <div class="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <div class="project-card p-6 rounded-lg bg-gray-800 relative" onmouseover="showeDescription(this)"
+                    onmouseout="hideeDescription(this)">
+                    <img src="https://www.alphansotech.com/Frontend/img/netflix/slider_banner.png" alt="Netflix Clone"
+                        class="w-full h-auto mb-4 rounded-lg">
+                    <h3 class="text-xl font-semibold mb-2">Netflix Clone</h3>
+                    <p class="text-gray-300 project-description">"Netflix clone project with video streaming."</p>
+                    <a href="https://example.com/netflix-clone"
+                        class="project-link-icon absolute inset-0 flex items-center justify-center opacity-0 transition-opacity duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 text-white" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path d="M15 3h4.5A2.5 2.5 0 0 1 22 5.5V10" />
+                            <path d="M10 14L21 3" />
+                            <path
+                                d="M21 3l-6 6M9 5h4a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-6a2 2 0 0 1 2-2h4" />
+                        </svg>
+                    </a>
+                </div>
+
+                <div class="project-card p-6 rounded-lg bg-gray-800 relative" onmouseover="showeDescription(this)"
+                    onmouseout="hideeDescription(this)">
+                    <img src="https://i.ytimg.com/vi/sd25t4HmFdU/maxresdefault.jpg" alt="Camera Access using Python"
+                        class="w-full h-auto mb-4 rounded-lg">
+                    <h3 class="text-xl font-semibold mb-2">Camera Access using Python</h3>
+                    <p class="text-gray-300 project-description">"Python project for camera access."</p>
+                    <a href="https://example.com/camera-access-python"
+                        class="project-link-icon absolute inset-0 flex items-center justify-center opacity-0 transition-opacity duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 text-white" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path d="M15 3h4.5A2.5 2.5 0 0 1 22 5.5V10" />
+                            <path d="M10 14L21 3" />
+                            <path
+                                d="M21 3l-6 6M9 5h4a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-6a2 2 0 0 1 2-2h4" />
+                        </svg>
+                    </a>
+                </div>
+
+                <div class="project-card p-6 rounded-lg bg-gray-800 relative" onmouseover="showeDescription(this)"
+                    onmouseout="hideeDescription(this)">
+                    <img src="https://blogger.googleusercontent.com/img/a/AVvXsEi_em2IhYnhe_3urIuILS6tgWQoV7sFKWj3drME2Phv92GO0p53MkvoqduIn9yeHwUNf2QAHYz-nawlDkPzHeJPC5hnx9bg2YXXcJmSDzr3O7PM9xTeKdXoVS0xb2hEmOEsa5hEBLVmg0QUaobjaJbJ32vitPNGCBic4H15PWP11EAc27bPI6tDsymssQ=s16000"
+                        alt="Digital Clock using Python" class="w-full h-auto mb-4 rounded-lg">
+                    <h3 class="text-xl font-semibold mb-2">Digital Clock using Python</h3>
+                    <p class="text-gray-300 project-description">"Python digital clock implementation project."</p>
+                    <a href="https://example.com/digital-clock-python"
+                        class="project-link-icon absolute inset-0 flex items-center justify-center opacity-0 transition-opacity duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 text-white" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path d="M15 3h4.5A2.5 2.5 0 0 1 22 5.5V10" />
+                            <path d="M10 14L21 3" />
+                            <path
+                                d="M21 3l-6 6M9 5h4a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-6a2 2 0 0 1 2-2h4" />
+                        </svg>
+                    </a>
+                </div>
+
+                <div class="project-card p-6 rounded-lg bg-gray-800 relative" onmouseover="showeDescription(this)"
+                    onmouseout="hideeDescription(this)">
+                    <img src="image.png" alt="Code pen for HTML, CSS, JS" class="w-full h-auto mb-4 rounded-lg">
+                    <h3 class="text-xl font-semibold mb-2">Code pen for HTML, CSS, JS</h3>
+                    <p class="text-gray-300 project-description"></p>
+                    <a href=" https://codepenhtml.netlify.app/"
+                        class="project-link-icon absolute inset-0 flex items-center justify-center opacity-0 transition-opacity duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 text-white" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path d="M15 3h4.5A2.5 2.5 0 0 1 22 5.5V10" />
+                            <path d="M10 14L21 3" />
+                            <path
+                                d="M21 3l-6 6M9 5h4a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-6a2 2 0 0 1 2-2h4" />
+                        </svg>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <section id="contact" class="py-20 text-center">
+        <div class="container mx-auto">
+            <h2>Contact Me</h2>
+            <p class="mt-4 text-lg text-gray-300 mx-auto max-w-md">Feel free to reach out to me using the form below.
+            </p>
+
+            <form id="contactForm" class="mt-8 mx-auto max-w-md" action="https://api.web3forms.com/submit"
+                method="POST">
+                <!-- Replace with your Web3Forms Access Key -->
+                <input type="hidden" name="access_key" value="ca0bd8d8-4663-4434-985c-eede4474cbfc">
+
+                <input type="text" id="name" name="name" class="w-full px-4 py-3 rounded-md bg-white text-gray-800 mb-3"
+                    placeholder="Your Name" required>
+
+                <input type="email" id="email" name="email"
+                    class="w-full px-4 py-3 rounded-md bg-white text-gray-800 mb-3" placeholder="Your Email" required>
+
+                <textarea id="message" name="message" class="w-full px-4 py-3 rounded-md bg-white text-gray-800 mb-3"
+                    placeholder="Your Message" required></textarea>
+
+                <!-- hCaptcha Spam Protection -->
+                <div class="flex justify-center">
+                    <div class="h-captcha w-full px-4 py-3 rounded-md bg-white text-gray-800 mb-3 " data-captcha="true"
+                        data-size="cover"></div>
+                </div>
+
+                <button type="submit"
+                    class="w-full bg-gray-200 text-black px-4 py-3 rounded-md font-semibold hover:bg-blue-300 focus:outline-none focus:bg-blue-600 transition duration-300">Send</button>
+            </form>
+
+            <p id="successMessage" class="mt-4 text-green-500"></p>
+        </div>
+    </section>
+    <div id="successModal"
+        class="modal hidden fixed top-0 left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-50">
+        <div class="bg-blue-200 p-8 rounded-md text-center">
+            <div class="text-3xl text-green-500 mb-4">✔️</div>
+            <h2 class="text-2xl font-bold text-black">Your message has been sent successfully!</h2>
+            <button id="closeModal" class="mt-4 bg-blue-500 text-white px-4 py-2 rounded-md">Close</button>
+        </div>
+    </div>
+
+    <!-- Required for Web3Forms -->
+    <script src="https://web3forms.com/client/script.js" defer></script>
+
+
+    <div class="mode-toggle" onclick="toggleMode()">
+        <i class="fas fa-adjust"></i>
+    </div>
+
+
+    <footer class="py-8 text-center bg-gray-800">
+        <div class="container">
+            <p class="text-gray-400">© 2024 Abid Shaikh. All rights reserved.</p>
+            <div class="social-links mt-4">
+                <a href="https://linkedin.com/in/mohd-abid-shaikh-a3738328b" target="_blank"
+                    class="text-gray-400 hover:text-gray-200">
+                    <i class="fab fa-linkedin fa-lg"></i>
+                </a>
+                <a href="https://twitter.com/AbidShaikh550" target="_blank" class="text-gray-400 hover:text-gray-200">
+                    <i class="fab fa-twitter fa-lg"></i>
+                </a>
+                <a href="https://github.com/Abid-sh84" target="_blank" class="text-gray-400 hover:text-gray-200">
+                    <i class="fab fa-github fa-lg"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+    <script>src = "script.js"</script>
+</body>
+
+</html>

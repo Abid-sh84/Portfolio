@@ -1,0 +1,222 @@
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    padding: 0;
+    font-family: sans-serif;
+    background: #101928;
+    color: #cbd5e0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+section {
+    padding: 80px 0;
+}
+
+h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.arrow-wrapper {
+    margin-top: 20px;
+    width: 24px;
+    height: 24px;
+    stroke: #ffffff;
+    stroke-width: 2;
+    cursor: pointer;
+    animation: rotate 1.5s ease-in-out infinite;
+}
+
+@keyframes rotate {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(4px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.skill-card {
+    position: relative;
+    overflow: hidden;
+    background-color: #2d3748;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+}
+
+.skill-description {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.skill-description p {
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+}
+
+.project-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(52, 138, 230, 0.8);
+
+}
+
+.project-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(13, 13, 13, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.project-description {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    padding: 20px;
+    background-color: rgba(35, 34, 32, 0.5);
+    color: white;
+    border-radius: 8px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+
+
+.project-card:hover .project-description {
+    opacity: 1;
+}
+
+
+.project-link-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+
+
+footer {
+    margin-top: auto;
+    width: 100%;
+    padding: 20px 0;
+    background-color: #333;
+    color: #ccc;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.social-links a {
+    margin-right: 10px;
+}
+
+.mode-toggle {
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+    background-color: #eaeff8;
+    color: #000000;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.fade-in-up {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.fade-in-up.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.hidden {}
+
+.modal {
+    z-index: 50;
+}
+.tool-card {
+position: relative;
+background-color: #23344c;
+border-radius: 9999px;
+padding: 1rem; /* 16px */
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+overflow: hidden;
+transition: box-shadow 0.3s ease;
+}
+
+.tool-card::after {
+content: "";
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: rgba(0, 0, 0, 0.3);
+border-radius: 9999px;
+transition: opacity 0.3s ease;
+opacity: 0;
+pointer-events: none;
+}
+
+.tool-card:hover::after {
+opacity: 1;
+}
+
+.tool-card:hover {
+box-shadow: 0 0 20px rgba(189, 206, 213, 0.3);
+}
+
