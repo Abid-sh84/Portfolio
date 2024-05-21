@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abid Shaikh</title>
+    <link rel="shortcut-icon" type="png" href="myimg.png">
+   
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+
+
+</head>
+<style>
+    body {
+        margin: 0;
+        font-family: 'Montserrat', sans-serif;
+        padding: 0;
+        font-family: sans-serif;
+        background: #101928;
+        color: #cbd5e0;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+
+    section {
+        padding: 80px 0;
+    }
+
+    h2 {
+        font-size: 2.5rem;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .arrow-wrapper {
+        margin-top: 20px;
+        width: 24px;
+        height: 24px;
+        stroke: #ffffff;
+        stroke-width: 2;
+        cursor: pointer;
+        animation: rotate 1.5s ease-in-out infinite;
+    }
+
+    @keyframes rotate {
+        0% {
+            transform: translateY(0);
+        }
+
+        50% {
+            transform: translateY(4px);
+        }
+
+        100% {
+            transform: translateY(0);
+        }
+    }
+
+    .skill-card {
+        position: relative;
+        overflow: hidden;
+        background-color: #2d3748;
+        border-radius: 10px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .skill-card:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+    }
+
+    .skill-description {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.8);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    .skill-description p {
+        font-size: 16px;
+        font-weight: bold;
+        color: #ffffff;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .project-card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .project-card:hover {
+        transform: scale(1.1);
+        box-shadow: 0 0 20px rgba(52, 138, 230, 0.8);
+
+    }
+
+    .project-card {
+        position: relative;
+        overflow: hidden;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(13, 13, 13, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .project-card img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+    }
+
+    .project-description {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 80%;
+        padding: 20px;
+        background-color: rgba(35, 34, 32, 0.5);
+        color: white;
+        border-radius: 8px;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+
+
+    .project-card:hover .project-description {
+        opacity: 1;
+    }
+
+
+    .project-link-icon {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+
+
+    footer {
+        margin-top: auto;
+        width: 100%;
+        padding: 20px 0;
+        background-color: #333;
+        color: #ccc;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    .social-links a {
+        margin-right: 10px;
+    }
+
+    .mode-toggle {
+        position: fixed;
+        width: 40px;
+        height: 40px;
+        bottom: 20px;
+        right: 20px;
+        z-index: 999;
+        background-color: #eaeff8;
+        color: #000000;
+        padding: 10px;
+        border-radius: 50%;
+        cursor: pointer;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    .fade-in-up {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+    }
+
+    .fade-in-up.active {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .hidden {}
+
+    .modal {
+        z-index: 50;
+    }
+    .tool-card {
+    position: relative;
+    background-color: #23344c;
+    border-radius: 9999px;
+    padding: 1rem; /* 16px */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
+}
+
+.tool-card::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 9999px;
+    transition: opacity 0.3s ease;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.tool-card:hover::after {
+    opacity: 1;
+}
+
+.tool-card:hover {
+    box-shadow: 0 0 20px rgba(189, 206, 213, 0.3);
+}
+
+   
+</style>
+
+<body>
+
+
+    <nav class="bg-gray-800 shadow-lg text-white">
+        <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+            <div>
+                <a href="mailto:shaikhabid8440@gmail.com" class="hover:text-gray-300">
+                    <i class="fas fa-envelope mr-2"></i>
+                    <span class="font-bold">shaikhabid8440@gmail.com</span>
+                </a>
+            </div>
+            <div class="hidden md:flex space-x-4">
+                <a href="#about" class="hover:text-gray-300">About</a>
+                <a href="#education" class="hover:text-gray-300">Education</a>
+                <a href="#skills" class="hover:text-gray-300">Skills</a>
+                <a href="#projects" class="hover:text-gray-300">Projects</a>
+                <a href="#contact" class="hover:text-gray-300">Contact</a>
+            </div>
+            <div class="md:hidden">
+                <button onclick="toggleNavbar()" class="text-white focus:outline-none">
+                    <span id="navbar-icon"><i class="fas fa-bars"></i></span>
+                </button>
+            </div>
+        </div>
+        <div id="mobileMenu" class="md:hidden hidden">
+            <a href="#about" class="block py-2 hover:bg-gray-700">About</a>
+            <a href="#education" class="hover:text-gray-300">Education</a>
+            <a href="#skills" class="block py-2 hover:bg-gray-700">Skills</a>
+            <a href="#projects" class="block py-2 hover:bg-gray-700">Projects</a>
+            <a href="#contact" class="block py-2 hover:bg-gray-700">Contact</a>
+        </div>
+    </nav>
+    
+
+
+    <section id="landing" class="text-center py-20">
+        <div class="container mx-auto">
+            <img src="profile-pic .png" alt="Abid Shaikh"
+                class="rounded-full w- lg:w-60 xl:w-60 h-40 lg:h-60 xl:h-60 border-4 border-white mx-auto mb-4">
+            <h1 class="text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight">Hey👋 I'm Abid Shaikh</h1>
+            <p class="mt-4 text-lg lg:text-xl xl:text-2xl font-bold">Frontend Developer</p>
+            <a href="#about"
+                class="mt-8 px-6 py-3 bg-white text-black rounded-full font-semibold hover:bg-gray-300 inline-block">Learn
+                More</a>
+        </div>
+        <div class="arrow-wrapper mx-auto mt-4" onclick="scrollToAbout()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="feather feather-chevron-down">
+                <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+        </div>
+    </section>
+
+    <section id="about" class="py-20 text-center">
+        <div class="container mx-auto">
+            <h2 class="font-bold text-white" >About Me</h2>
+            <p class="mt-4 text-lg text-white mx-auto text-justify lg:text-center ">Welcome to my portfolio! I'm Abid Shaikh, a passionate
+                frontend developer with a keen interest in C++ and Python programming languages. With a strong
+                foundation in web development and a curiosity for exploring new technologies, I strive to create
+                engaging and user-friendly digital experiences.</p>
+        </div>
+    </section>
+    <section id="education" class="py-20 text-center fade-in-up">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-white mb-8">Education</h2>
+            <div class="flex flex-col items-center">
+                <img src="https://www.reviewadda.com/assets/uploads/college/logo/LOGO_70468.gif" alt="CHM College Logo" class="w-24 h-24 mb-4">
+                <h3 class="text-2xl font-semibold text-white">CHM College</h3>
+                <p class="text-lg text-white">BSc Computer Science, First Year</p>
+                <p class="text-lg text-white">Expected Graduation: 2026</p>
+                <p class="text-lg text-white mt-4 text-justify lg:text-center">I'm a first-year BSc Computer Science student at CHM College, with an expected graduation year of 2026. Passionate about coding, technology, and continuous learning, I'm eager to contribute to innovative projects and expand my knowledge in the field of computer science.</p>
+                <p class="text-lg text-white mt-4"></p>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="py-20 text-center fade-in-up">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-white">My Skills</h2>
+            <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-8">
+
+                <div class="skill-card p-6 rounded-lg bg-gray-800 relative" onmouseover="showDescription(this)"
+                    onmouseout="hideDescription(this)">
+                    <div
+                        class="skill-description absolute top-0 left-0 right-0 bottom-0 bg-opacity-80 flex justify-center items-center transition-opacity duration-300 opacity-0">
+                        <p class="text-white">Proficient in building responsive and interactive web interfaces using
+                            HTML and CSS.</p>
+                    </div>
+                    <i class="fab fa-html5 text-5xl text-gray-400"></i>
+                    <i class="fab fa-css3-alt text-5xl text-blue-300" style="margin-top: 20px;"></i>
+                </div>
+
+                <div class="skill-card p-6 rounded-lg bg-gray-800 relative" onmouseover="showDescription(this)"
+                    onmouseout="hideDescription(this)">
+                    <div
+                        class="skill-description absolute top-0 left-0 right-0 bottom-0 bg-opacity-80 flex justify-center items-center transition-opacity duration-300 opacity-0">
+                        <p class="text-white">Skilled in frontend scripting with JavaScript to create dynamic and
+                            feature-rich websites.</p>
+                    </div>
+                    <i class="fab fa-js-square text-5xl text-yellow-400"></i>
+                </div>
+
+                <div class="skill-card p-6 rounded-lg bg-gray-800 relative" onmouseover="showDescription(this)"
+                    onmouseout="hideDescription(this)">
+                    <div
+                        class="skill-description absolute top-0 left-0 right-0 bottom-0 bg-opacity-80 flex justify-center items-center transition-opacity duration-300 opacity-0">
+                        <p class="text-white">Experience in building modern web applications using React.js framework.
+                        </p>
+                    </div>
+                    <i class="fab fa-react text-5xl text-blue-400"></i>
+                </div>
+
+                <div class="skill-card p-6 rounded-lg bg-gray-800 relative" onmouseover="showDescription(this)"
+                    onmouseout="hideDescription(this)">
+                    <div
+                        class="skill-description absolute top-0 left-0 right-0 bottom-0 bg-opacity-80 flex justify-center items-center transition-opacity duration-300 opacity-0">
+                        <p class="text-white">Proficient in Python programming language for web development, scripting,
+                            and data analysis.</p>
+                    </div>
+                    <i class="fab fa-python text-5xl text-yellow-500"></i>
+                </div>
+
+                <div class="skill-card p-6 rounded-lg bg-gray-800 relative" onmouseover="showDescription(this)"
+                    onmouseout="hideDescription(this)">
+                    <div
+                        class="skill-description absolute top-0 left-0 right-0 bottom-0 bg-opacity-80 flex justify-center items-center transition-opacity duration-300 opacity-0">
+                        <p class="text-white">Proficient in C++ programming language for software development,
+                            algorithms, and systems programming.</p>
+                    </div>
+                    <i class="fab fa-cuttlefish text-5xl text-green-500"></i>
+                </div>
+
+                <div class="skill-card p-6 rounded-lg bg-gray-800 relative" onmouseover="showDescription(this)"
+                    onmouseout="hideDescription(this)">
+                    <div
+                        class="skill-description absolute top-0 left-0 right-0 bottom-0 bg-opacity-80 flex justify-center items-center transition-opacity duration-300 opacity-0">
+                        <p class="text-white">Proficient in Node.js for scalable server-side JavaScript applications.
+                        </p>
+                    </div>
+                    <i class="fab fa-node-js text-5xl text-green-400"></i>
+
+                </div>
+    </section>
+    <section id="tools" class="py-20 text-center fade-in-up">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-white mb-8">Tools</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <!-- Card for VS Code -->
+                <div class="tool-card bg-gray-800 rounded-full p-4 flex flex-col items-center justify-center hover:shadow-lg transition duration-300">
+                    <img src="visual-studio.png" alt="VS Code" class="w-16 h-16 mb-4 rounded-full">
+                    <h3 class="text-lg font-semibold text-white">VS Code</h3>
+                </div>
+                <!-- Card for Git -->
+                <div class="tool-card bg-gray-800 rounded-full p-4 flex flex-col items-center justify-center hover:shadow-lg transition duration-300">
+                    <img src="git-svgrepo-com.svg" alt="Git" class="w-16 h-16 mb-4 rounded-full">
+                    <h3 class="text-lg font-semibold text-white">Git</h3>
+                </div>
+                <!-- Card for GitHub -->
+                <div class="tool-card bg-gray-800 rounded-full p-4 flex flex-col items-center justify-center hover:shadow-lg transition duration-300">
+                    <img src="social.png" alt="GitHub" class="w-16 h-16 mb-4 rounded-full">
+                    <h3 class="text-lg font-semibold text-white">GitHub</h3>
+                </div>
+                <!-- Card for Linux -->
+                <div class="tool-card bg-gray-800 rounded-full p-4 flex flex-col items-center justify-center hover:shadow-lg transition duration-300">
+                    <img src="linux.png" alt="Linux" class="w-16 h-16 mb-4 rounded-full">
+                    <h3 class="text-lg font-semibold text-white">Linux</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+
+
+    <section id="projects" class="py-20 text-center fade-in-up">
+        <div class="container">
+            <h2 class="text-3xl font-bold text-white">Projects</h2>
+            <div class="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <div class="project-card p-6 rounded-lg bg-gray-800 relative" onmouseover="showeDescription(this)"
+                    onmouseout="hideeDescription(this)">
+                    <img src="https://www.alphansotech.com/Frontend/img/netflix/slider_banner.png" alt="Netflix Clone"
+                        class="w-full h-auto mb-4 rounded-lg">
+                    <h3 class="text-xl font-semibold mb-2">Netflix Clone</h3>
+                    <p class="text-gray-300 project-description">"Netflix clone project with video streaming."</p>
+                    <a href="https://example.com/netflix-clone"
+                        class="project-link-icon absolute inset-0 flex items-center justify-center opacity-0 transition-opacity duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 text-white" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path d="M15 3h4.5A2.5 2.5 0 0 1 22 5.5V10" />
+                            <path d="M10 14L21 3" />
+                            <path
+                                d="M21 3l-6 6M9 5h4a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-6a2 2 0 0 1 2-2h4" />
+                        </svg>
+                    </a>
+                </div>
+
+                <div class="project-card p-6 rounded-lg bg-gray-800 relative" onmouseover="showeDescription(this)"
+                    onmouseout="hideeDescription(this)">
+                    <img src="https://i.ytimg.com/vi/sd25t4HmFdU/maxresdefault.jpg" alt="Camera Access using Python"
+                        class="w-full h-auto mb-4 rounded-lg">
+                    <h3 class="text-xl font-semibold mb-2">Camera Access using Python</h3>
+                    <p class="text-gray-300 project-description">"Python project for camera access."</p>
+                    <a href="https://example.com/camera-access-python"
+                        class="project-link-icon absolute inset-0 flex items-center justify-center opacity-0 transition-opacity duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 text-white" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path d="M15 3h4.5A2.5 2.5 0 0 1 22 5.5V10" />
+                            <path d="M10 14L21 3" />
+                            <path
+                                d="M21 3l-6 6M9 5h4a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-6a2 2 0 0 1 2-2h4" />
+                        </svg>
+                    </a>
+                </div>
+
+                <div class="project-card p-6 rounded-lg bg-gray-800 relative" onmouseover="showeDescription(this)"
+                    onmouseout="hideeDescription(this)">
+                    <img src="https://blogger.googleusercontent.com/img/a/AVvXsEi_em2IhYnhe_3urIuILS6tgWQoV7sFKWj3drME2Phv92GO0p53MkvoqduIn9yeHwUNf2QAHYz-nawlDkPzHeJPC5hnx9bg2YXXcJmSDzr3O7PM9xTeKdXoVS0xb2hEmOEsa5hEBLVmg0QUaobjaJbJ32vitPNGCBic4H15PWP11EAc27bPI6tDsymssQ=s16000"
+                        alt="Digital Clock using Python" class="w-full h-auto mb-4 rounded-lg">
+                    <h3 class="text-xl font-semibold mb-2">Digital Clock using Python</h3>
+                    <p class="text-gray-300 project-description">"Python digital clock implementation project."</p>
+                    <a href="https://example.com/digital-clock-python"
+                        class="project-link-icon absolute inset-0 flex items-center justify-center opacity-0 transition-opacity duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 text-white" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path d="M15 3h4.5A2.5 2.5 0 0 1 22 5.5V10" />
+                            <path d="M10 14L21 3" />
+                            <path
+                                d="M21 3l-6 6M9 5h4a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-6a2 2 0 0 1 2-2h4" />
+                        </svg>
+                    </a>
+                </div>
+
+                <div class="project-card p-6 rounded-lg bg-gray-800 relative" onmouseover="showeDescription(this)"
+                    onmouseout="hideeDescription(this)">
+                    <img src="image.png" alt="Code pen for HTML, CSS, JS" class="w-full h-auto mb-4 rounded-lg">
+                    <h3 class="text-xl font-semibold mb-2">Code pen for HTML, CSS, JS</h3>
+                    <p class="text-gray-300 project-description"></p>
+                    <a href=" https://codepenhtml.netlify.app/"
+                        class="project-link-icon absolute inset-0 flex items-center justify-center opacity-0 transition-opacity duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 text-white" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path d="M15 3h4.5A2.5 2.5 0 0 1 22 5.5V10" />
+                            <path d="M10 14L21 3" />
+                            <path
+                                d="M21 3l-6 6M9 5h4a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-6a2 2 0 0 1 2-2h4" />
+                        </svg>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <section id="contact" class="py-20 text-center">
+        <div class="container mx-auto">
+            <h2>Contact Me</h2>
+            <p class="mt-4 text-lg text-gray-300 mx-auto max-w-md">Feel free to reach out to me using the form below.
+            </p>
+
+            <form id="contactForm" class="mt-8 mx-auto max-w-md" action="https://api.web3forms.com/submit"
+                method="POST">
+                <!-- Replace with your Web3Forms Access Key -->
+                <input type="hidden" name="access_key" value="ca0bd8d8-4663-4434-985c-eede4474cbfc">
+
+                <input type="text" id="name" name="name" class="w-full px-4 py-3 rounded-md bg-white text-gray-800 mb-3"
+                    placeholder="Your Name" required>
+
+                <input type="email" id="email" name="email"
+                    class="w-full px-4 py-3 rounded-md bg-white text-gray-800 mb-3" placeholder="Your Email" required>
+
+                <textarea id="message" name="message" class="w-full px-4 py-3 rounded-md bg-white text-gray-800 mb-3"
+                    placeholder="Your Message" required></textarea>
+
+                <!-- hCaptcha Spam Protection -->
+                <div class="flex justify-center">
+                    <div class="h-captcha w-full px-4 py-3 rounded-md bg-white text-gray-800 mb-3 " data-captcha="true"
+                        data-size="cover"></div>
+                </div>
+
+                <button type="submit"
+                    class="w-full bg-gray-200 text-black px-4 py-3 rounded-md font-semibold hover:bg-blue-300 focus:outline-none focus:bg-blue-600 transition duration-300">Send</button>
+            </form>
+
+            <p id="successMessage" class="mt-4 text-green-500"></p>
+        </div>
+    </section>
+    <div id="successModal"
+        class="modal hidden fixed top-0 left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-50">
+        <div class="bg-blue-200 p-8 rounded-md text-center">
+            <div class="text-3xl text-green-500 mb-4">✔️</div>
+            <h2 class="text-2xl font-bold text-black">Your message has been sent successfully!</h2>
+            <button id="closeModal" class="mt-4 bg-blue-500 text-white px-4 py-2 rounded-md">Close</button>
+        </div>
+    </div>
+
+    <!-- Required for Web3Forms -->
+    <script src="https://web3forms.com/client/script.js" defer></script>
+
+
+    <div class="mode-toggle" onclick="toggleMode()">
+        <i class="fas fa-adjust"></i>
+    </div>
+
+
+    <footer class="py-8 text-center bg-gray-800">
+        <div class="container">
+            <p class="text-gray-400">© 2024 Abid Shaikh. All rights reserved.</p>
+            <div class="social-links mt-4">
+                <a href="https://linkedin.com/in/mohd-abid-shaikh-a3738328b" target="_blank"
+                    class="text-gray-400 hover:text-gray-200">
+                    <i class="fab fa-linkedin fa-lg"></i>
+                </a>
+                <a href="https://twitter.com/AbidShaikh550" target="_blank" class="text-gray-400 hover:text-gray-200">
+                    <i class="fab fa-twitter fa-lg"></i>
+                </a>
+                <a href="https://github.com/Abid-sh84" target="_blank" class="text-gray-400 hover:text-gray-200">
+                    <i class="fab fa-github fa-lg"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script>
+        // GSAP animation to rotate tool cards in a circular way
+        gsap.registerPlugin("motionPath");
+    
+        gsap.utils.toArray(".tool-card").forEach((card, index) => {
+            gsap.to(card, {
+                duration: 2,
+                motionPath: {
+                    path: `M150 100 a 50 50 0 1 1 100 0 a 50 50 0 1 1 -100 0`,
+                    align: card,
+                    autoRotate: true,
+                    alignOrigin: [0.5, 0.5],
+                },
+                repeat: -1,
+                delay: index * 0.2 // Add delay to stagger animation
+            });
+        });
+    </script>
+    
+
+    <script>
+        
+       
+        function scrollToAbout() {
+            const aboutSection = document.getElementById('about');
+            if (aboutSection) {
+                aboutSection.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+        function toggleNavbar() {
+            const mobileMenu = document.getElementById("mobileMenu");
+            mobileMenu.classList.toggle("hidden");
+        }
+
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+
+
+        function animateOnScroll() {
+            const sections = document.querySelectorAll('.fade-in-up');
+            sections.forEach(section => {
+                const sectionTop = section.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                if (sectionTop < windowHeight - 100) {
+                    section.classList.add('active');
+                }
+            });
+        }
+
+
+        function showDescription(element) {
+            const description = element.querySelector('.skill-description');
+            if (description) {
+                description.style.opacity = '1';
+            }
+        }
+
+        function hideDescription(element) {
+            const description = element.querySelector('.skill-description');
+            if (description) {
+                description.style.opacity = '0';
+            }
+        }
+
+
+        window.addEventListener('scroll', animateOnScroll);
+        animateOnScroll();
+        function toggleMode() {
+            const body = document.body;
+            if (body.classList.contains('dark')) {
+                // Switch to light mode
+                body.classList.remove('dark');
+                body.style.backgroundColor = '#475672';
+            } else {
+                // Switch to dark modeP
+                body.classList.add('dark');
+                body.style.backgroundColor = '#101928';
+            }
+        }
+        function showeDescription(element) {
+            const linkIcon = element.querySelector('.project-link-icon');
+            if (linkIcon) {
+                linkIcon.style.opacity = '1';
+            }
+        }
+
+        function hideeDescription(element) {
+            const linkIcon = element.querySelector('.project-link-icon');
+            if (linkIcon) {
+                linkIcon.style.opacity = '0';
+            }
+        }
+        document.getElementById('contactForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            var form = event.target;
+
+            fetch(form.action, {
+                method: form.method,
+                body: new FormData(form),
+            }).then(function (response) {
+                if (response.ok) {
+                    form.reset();
+                    document.getElementById('successModal').classList.remove('hidden');
+                } else {
+                    document.getElementById('successMessage').innerText = 'There was an error sending your message.';
+                }
+            }).catch(function (error) {
+                document.getElementById('successMessage').innerText = 'There was an error sending your message.';
+            });
+        });
+
+        document.getElementById('closeModal').addEventListener('click', function () {
+            document.getElementById('successModal').classList.add('hidden');
+            // Reset the form to clear CAPTCHA if the user closes the modal
+            document.getElementById('contactForm').reset();
+        });
+
+
+    </script>
+
+</body>
+
+</html>
