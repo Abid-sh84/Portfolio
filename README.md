@@ -1,8 +1,8 @@
 # Abid Shaikh Portfolio
 
 Welcome to my portfolio repository! This project showcases my web development skills using HTML, Tailwind CSS, and JavaScript.
+![image](https://github.com/Abid-sh84/Portfolio/assets/147331189/802cce54-c45c-4727-88f4-3fe973314c8f)
 
-![image](https://github.com/Abid-sh84/Portfolio/assets/147331189/b268f092-2787-4798-8a37-fb85c64c2e31)
 
 
 ## 🌐 Live Demo
