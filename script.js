@@ -1,1 +1,98 @@
-function _0x2f2c(_0x320b45,_0x258a26){const _0x5a0850=_0x5a08();return _0x2f2c=function(_0x2f2c9d,_0x3246bb){_0x2f2c9d=_0x2f2c9d-0x1b5;let _0x4d29df=_0x5a0850[_0x2f2c9d];return _0x4d29df;},_0x2f2c(_0x320b45,_0x258a26);}const _0x321d24=_0x2f2c;(function(_0x2bca5e,_0x14e1e3){const _0x5a984f=_0x2f2c,_0xc0c186=_0x2bca5e();while(!![]){try{const _0x454819=parseInt(_0x5a984f(0x1cf))/0x1+parseInt(_0x5a984f(0x1d6))/0x2+-parseInt(_0x5a984f(0x1e6))/0x3+-parseInt(_0x5a984f(0x1db))/0x4*(-parseInt(_0x5a984f(0x1c4))/0x5)+parseInt(_0x5a984f(0x1b8))/0x6*(parseInt(_0x5a984f(0x1d4))/0x7)+parseInt(_0x5a984f(0x1dc))/0x8+parseInt(_0x5a984f(0x1ba))/0x9*(-parseInt(_0x5a984f(0x1c1))/0xa);if(_0x454819===_0x14e1e3)break;else _0xc0c186['push'](_0xc0c186['shift']());}catch(_0xefc628){_0xc0c186['push'](_0xc0c186['shift']());}}}(_0x5a08,0x918a5));function scrollToAbout(){const _0x4d4cd3=_0x2f2c,_0x5534eb=document[_0x4d4cd3(0x1e2)](_0x4d4cd3(0x1e5));_0x5534eb&&_0x5534eb[_0x4d4cd3(0x1e7)]({'behavior':'smooth'});}function toggleNavbar(){const _0x34d8b5=_0x2f2c,_0x2ed5df=document[_0x34d8b5(0x1e2)](_0x34d8b5(0x1d1));_0x2ed5df[_0x34d8b5(0x1b7)][_0x34d8b5(0x1d7)](_0x34d8b5(0x1cc));}document['querySelectorAll'](_0x321d24(0x1ce))[_0x321d24(0x1d2)](_0x3f3948=>{const _0x4b9d5d=_0x321d24;_0x3f3948['addEventListener'](_0x4b9d5d(0x1e4),function(_0x30c3a1){const _0x23f8e7=_0x4b9d5d;_0x30c3a1[_0x23f8e7(0x1b9)]();const _0x245219=this[_0x23f8e7(0x1be)](_0x23f8e7(0x1da))[_0x23f8e7(0x1ca)](0x1),_0x13631e=document[_0x23f8e7(0x1e2)](_0x245219);_0x13631e&&window[_0x23f8e7(0x1c0)]({'top':_0x13631e[_0x23f8e7(0x1d9)],'behavior':_0x23f8e7(0x1c8)});});});function animateOnScroll(){const _0x5f4249=_0x321d24,_0x1261d4=document['querySelectorAll']('.fade-in-up');_0x1261d4[_0x5f4249(0x1d2)](_0x4c6c23=>{const _0x2b13b8=_0x5f4249,_0x427e23=_0x4c6c23[_0x2b13b8(0x1c3)]()['top'],_0x4bad3a=window[_0x2b13b8(0x1df)];_0x427e23<_0x4bad3a-0x64&&_0x4c6c23[_0x2b13b8(0x1b7)][_0x2b13b8(0x1b6)](_0x2b13b8(0x1d8));});}function _0x5a08(){const _0xa644aa=['2206806NQdUIk','toggle','active','offsetTop','href','36oHZngj','2390312cqOryy','submit','.project-link-icon','innerHeight','scroll','innerText','getElementById','catch','click','about','1728186OsWihH','scrollIntoView','There\x20was\x20an\x20error\x20sending\x20your\x20message.','add','classList','6OBYFkf','preventDefault','1305yLmFaE','addEventListener','remove','action','getAttribute','then','scrollTo','174550dNViyv','successMessage','getBoundingClientRect','374305oAXxnd','reset','target','opacity','smooth','style','substring','.skill-description','hidden','querySelector','a[href^=\x22#\x22]','954778yVQsSJ','closeModal','mobileMenu','forEach','method','4707157kfqguI','successModal'];_0x5a08=function(){return _0xa644aa;};return _0x5a08();}function showDescription(_0x5731d4){const _0xc3427b=_0x321d24,_0x34e8e0=_0x5731d4[_0xc3427b(0x1cd)](_0xc3427b(0x1cb));_0x34e8e0&&(_0x34e8e0[_0xc3427b(0x1c9)][_0xc3427b(0x1c7)]='1');}function hideDescription(_0x28a057){const _0xed462a=_0x321d24,_0x11b4b7=_0x28a057['querySelector'](_0xed462a(0x1cb));_0x11b4b7&&(_0x11b4b7[_0xed462a(0x1c9)][_0xed462a(0x1c7)]='0');}window[_0x321d24(0x1bb)](_0x321d24(0x1e0),animateOnScroll),animateOnScroll();function showeDescription(_0x47a44f){const _0xfb6046=_0x321d24,_0x3c9eea=_0x47a44f[_0xfb6046(0x1cd)](_0xfb6046(0x1de));_0x3c9eea&&(_0x3c9eea[_0xfb6046(0x1c9)][_0xfb6046(0x1c7)]='1');}function hideeDescription(_0x2b48e6){const _0x167153=_0x321d24,_0x55e061=_0x2b48e6['querySelector']('.project-link-icon');_0x55e061&&(_0x55e061[_0x167153(0x1c9)][_0x167153(0x1c7)]='0');}document[_0x321d24(0x1e2)]('contactForm')['addEventListener'](_0x321d24(0x1dd),function(_0x4f9753){const _0x546799=_0x321d24;_0x4f9753[_0x546799(0x1b9)]();var _0x2a73a6=_0x4f9753[_0x546799(0x1c6)];fetch(_0x2a73a6[_0x546799(0x1bd)],{'method':_0x2a73a6[_0x546799(0x1d3)],'body':new FormData(_0x2a73a6)})[_0x546799(0x1bf)](function(_0x41b743){const _0x3883f7=_0x546799;_0x41b743['ok']?(_0x2a73a6[_0x3883f7(0x1c5)](),document[_0x3883f7(0x1e2)](_0x3883f7(0x1d5))[_0x3883f7(0x1b7)][_0x3883f7(0x1bc)](_0x3883f7(0x1cc))):document[_0x3883f7(0x1e2)]('successMessage')[_0x3883f7(0x1e1)]=_0x3883f7(0x1b5);})[_0x546799(0x1e3)](function(_0x606720){const _0x4bcd25=_0x546799;document[_0x4bcd25(0x1e2)](_0x4bcd25(0x1c2))[_0x4bcd25(0x1e1)]=_0x4bcd25(0x1b5);});}),document['getElementById'](_0x321d24(0x1d0))[_0x321d24(0x1bb)]('click',function(){const _0x427271=_0x321d24;document['getElementById']('successModal')[_0x427271(0x1b7)][_0x427271(0x1b6)](_0x427271(0x1cc)),document[_0x427271(0x1e2)]('contactForm')[_0x427271(0x1c5)]();}),toggleMode();
+function scrollToAbout() {
+    const aboutSection = document.getElementById('about');
+    if (aboutSection) {
+        aboutSection.scrollIntoView({ behavior: 'smooth' });
+    }
+}
+function toggleNavbar() {
+    const mobileMenu = document.getElementById("mobileMenu");
+    mobileMenu.classList.toggle("hidden");
+}
+
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href').substring(1);
+        const targetElement = document.getElementById(targetId);
+        if (targetElement) {
+            window.scrollTo({
+                top: targetElement.offsetTop,
+                behavior: 'smooth'
+            });
+        }
+    });
+});
+
+
+
+function animateOnScroll() {
+    const sections = document.querySelectorAll('.fade-in-up');
+    sections.forEach(section => {
+        const sectionTop = section.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+        if (sectionTop < windowHeight - 100) {
+            section.classList.add('active');
+        }
+    });
+}
+
+
+function showDescription(element) {
+    const description = element.querySelector('.skill-description');
+    if (description) {
+        description.style.opacity = '1';
+    }
+}
+
+function hideDescription(element) {
+    const description = element.querySelector('.skill-description');
+    if (description) {
+        description.style.opacity = '0';
+    }
+}
+
+
+window.addEventListener('scroll', animateOnScroll);
+animateOnScroll();
+
+
+function showeDescription(element) {
+    const linkIcon = element.querySelector('.project-link-icon');
+    if (linkIcon) {
+        linkIcon.style.opacity = '1';
+    }
+}
+
+function hideeDescription(element) {
+    const linkIcon = element.querySelector('.project-link-icon');
+    if (linkIcon) {
+        linkIcon.style.opacity = '0';
+    }
+}
+document.getElementById('contactForm').addEventListener('submit', function (event) {
+    event.preventDefault();
+
+    var form = event.target;
+
+    fetch(form.action, {
+        method: form.method,
+        body: new FormData(form),
+    }).then(function (response) {
+        if (response.ok) {
+            form.reset();
+            document.getElementById('successModal').classList.remove('hidden');
+        } else {
+            document.getElementById('successMessage').innerText = 'There was an error sending your message.';
+        }
+    }).catch(function (error) {
+        document.getElementById('successMessage').innerText = 'There was an error sending your message.';
+    });
+});
+
+document.getElementById('closeModal').addEventListener('click', function () {
+    document.getElementById('successModal').classList.add('hidden');
+    // Reset the form to clear CAPTCHA if the user closes the modal
+    document.getElementById('contactForm').reset();
+});
+toggleMode()
